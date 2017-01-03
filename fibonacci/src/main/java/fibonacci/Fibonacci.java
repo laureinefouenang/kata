@@ -1,3 +1,5 @@
+package fibonacci;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +27,7 @@ public class Fibonacci {
     }
 
     private static final Map<Integer, Integer> cache = new HashMap<>();
+
     public static int memoizedComputeRecursive(int input) {
         if (input < 0) throw new IllegalArgumentException();
         if (cache.containsKey(input)) return cache.get(input);
@@ -41,7 +44,7 @@ public class Fibonacci {
     }
 
     private static int[] internalComputeQuickRecursive(int input) {
-        if (input == 1) return new int[] {1, 0};
+        if (input == 1) return new int[]{1, 0};
         int[] previous = internalComputeQuickRecursive(input - 1);
         return new int[]{previous[0] + previous[1], previous[0]};
     }
@@ -49,12 +52,12 @@ public class Fibonacci {
     public static void main(String[] args) {
         final int N = 100;
         long start = System.nanoTime();
-            //computeIterative(N);
-            //computeQuickRecursive(N);
-            //computeRecursive(N);
-            memoizedComputeRecursive(N);
+        //computeIterative(N);
+        //computeQuickRecursive(N);
+        //computeRecursive(N);
+        memoizedComputeRecursive(N);
         long stop = System.nanoTime();
-        double delay = (double)(stop - start) / 1000000.0;
+        double delay = (double) (stop - start) / 1000000.0;
         System.out.println("Time: " + delay);
     }
 }

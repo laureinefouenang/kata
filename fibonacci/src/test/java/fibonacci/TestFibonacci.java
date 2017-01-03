@@ -1,5 +1,9 @@
+package fibonacci;
+
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class TestFibonacci {
@@ -31,14 +35,14 @@ public class TestFibonacci {
     }
 
     public void compute_fibonacci_values(final FibonacciComputer fibonacci) {
-        Assert.assertEquals(0, fibonacci.compute(0));
-        Assert.assertEquals(1, fibonacci.compute(1));
-        Assert.assertEquals(1, fibonacci.compute(2));
-        Assert.assertEquals(2, fibonacci.compute(3));
-        Assert.assertEquals(3, fibonacci.compute(4));
-        Assert.assertEquals(5, fibonacci.compute(5));
-        Assert.assertEquals(8, fibonacci.compute(6));
-        Assert.assertEquals(6765, fibonacci.compute(20));
+        assertEquals(0, fibonacci.compute(0));
+        assertEquals(1, fibonacci.compute(1));
+        assertEquals(1, fibonacci.compute(2));
+        assertEquals(2, fibonacci.compute(3));
+        assertEquals(3, fibonacci.compute(4));
+        assertEquals(5, fibonacci.compute(5));
+        assertEquals(8, fibonacci.compute(6));
+        assertEquals(6765, fibonacci.compute(20));
     }
 
     public interface FibonacciComputer {
