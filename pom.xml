@@ -11,6 +11,7 @@
     <modules>
         <module>fibonacci</module>
         <module>leapyear</module>
+        <module>stringcalculator</module>
     </modules>
 
 </project>
