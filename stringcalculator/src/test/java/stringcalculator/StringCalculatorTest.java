@@ -16,5 +16,15 @@ public class StringCalculatorTest {
         assertEquals(7, StringCalculator.add("7"), 0);
     }
 
+    @Test
+    public void should_return_the_sum_of_the_entries_values(){
+        assertEquals(4+2, StringCalculator.add("4,2"), 0);
+    }
+
+    @Test
+    public void should_return_the_sum_of_multiple_entries_values(){
+        assertEquals(5+2+1+20+25, StringCalculator.add("5,2,1,20,25"),0);
+    }
+
 
 }
