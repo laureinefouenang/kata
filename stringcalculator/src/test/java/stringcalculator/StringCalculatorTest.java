@@ -26,5 +26,10 @@ public class StringCalculatorTest {
         assertEquals(5+2+1+20+25, StringCalculator.add("5,2,1,20,25"),0);
     }
 
+    @Test
+    public void should_return_the_sum_of_multiple_entries_with_space(){
+        assertEquals(8+3+17+1, StringCalculator.add("8,3n17,1"),0);
+    }
+
 
 }

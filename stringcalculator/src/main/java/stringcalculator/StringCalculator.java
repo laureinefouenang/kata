@@ -3,10 +3,10 @@ package stringcalculator;
 public class StringCalculator {
     public static double add (String number){
         double result = 0;
-        String[] ArrayOfNumbers = number.split(",");
+        String[] ArrayOfNumbers = number.split(",|n");
             for(String anumber : ArrayOfNumbers){
                 if(! anumber.trim().isEmpty()){
-                    result += Integer.parseInt(anumber);
+                    result += Integer.parseInt(anumber.trim());
                 }
             }
         return result;
