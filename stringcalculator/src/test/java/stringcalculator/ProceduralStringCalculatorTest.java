@@ -31,4 +31,9 @@ public class ProceduralStringCalculatorTest {
     public void should_return_the_sum_of_multiple_entries_with_space() {
         assertEquals(8 + 3 + 17 + 1, add("8,3\n17,1"), 0);
     }
+
+    @Test
+    public void should_return_the_sum_of_multiple_entries_values_with_multiple_delimiter(){
+        assertEquals(8+4+3, add("//;\n8;4;3"), 0);
+    }
 }
